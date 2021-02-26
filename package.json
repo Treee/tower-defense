@@ -1,0 +1,28 @@
+{
+  "name": "tower-defense",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.node build",
+    "build": "browserify src/index.js -o build/tower-defense-bundle.js -t [ babelify ] && npm run copy",
+    "build-test": "browserify src/test.js -o build/test-tower-defense-bundle.js -t [ babelify ] && npm run copy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "jquery": "^3.5.1",
+    "twgl.js": "^4.19.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.5",
+    "@babel/preset-react": "^7.12.13",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "copyfiles": "^2.4.1"
+  }
+}
